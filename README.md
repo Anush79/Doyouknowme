@@ -2,7 +2,10 @@
 CLI quiz app (Do you know me?) 
 **mark one for NeoG camp**
 This quiz is about me, those who actually know me can answer all the questions pretty well.You will get scores as well.
+I have used **chalk Library** to give CLI a beautiful look, hope you like it.
+
 Thanks for visiting.
+
 Here is the screenshot of how it actually looks like
 
 
