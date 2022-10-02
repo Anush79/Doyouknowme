@@ -1,21 +1,21 @@
 var readline = require("readline-sync");
-
+var chalk = require("chalk");
 var name = readline.question("What is your Name?   ");
-console.log("Welcome "+name);
-console.log("How well do you know me?! Let's Find out .\n Tell me ....\n")
+console.log(chalk.bgBlue.underline.bold("\n Welcome "+name));
+console.log("\n How well do you know me?! Let's Find out .\n Tell me ....\n")
 
 var score = 0;
 function quiz(ques , ans)
   {
-    var userAns = readline.question(ques);
+    var userAns = readline.question(chalk.magenta(ques));
     if(userAns === ans)
     { 
       score = score + 5;
-      console.log("Correct Answer ! Your score is " + score +"\n")
+      console.log(chalk.bgGreen("\n Correct Answer ! Your score is " + score +"\n"))
     }
     else{
       
-      console.log("Wrong Answer! score is " +score);
+      console.log(chalk.bgRed("\n Wrong Answer! score is " +score));
       
     }
     
@@ -34,7 +34,7 @@ var Questions = [ {
 
  {
   question : "\n When do i celebrate my birthday? ",
-  answer: "9 november"
+  answer: "29 november"
 },
 
  {
@@ -52,4 +52,4 @@ for(var i = 0; i < Questions.length; i++){
   
   quiz(Questions[i].question,Questions[i].answer)
 }
-console.log("\nGAME OVER\nYour Final score is "+score);
+console.log(chalk.bgCyan("\nGAME OVER\nYour Final score is "+score));
